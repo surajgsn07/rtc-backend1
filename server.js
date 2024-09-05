@@ -56,6 +56,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('answer', ({ answer, targetId }) => {
+        console.log("answer got");
         const targetSocket = users[targetId];
         if (targetSocket) {
             io.to(targetSocket).emit('answer', answer);
