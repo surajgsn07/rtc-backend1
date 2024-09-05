@@ -16,8 +16,9 @@ app.use(cors({
 
 app.get("/",(req,res)=>{
     res.send("hello world");
-}
 
+    }
+)
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -71,6 +72,6 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(10000, () => {
+server.listen(process.env.PORT || 10000, () => {
     console.log('Server is listening on port 3000');
 });
