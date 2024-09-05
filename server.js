@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv').config();
 const app = express();
 
-// Configure CORS to allow requests from localhost:5173
+
 app.use(cors({
     origin: 'https://rtc-frontend1.vercel.app',
     methods: ['GET', 'POST'],
