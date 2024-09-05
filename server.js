@@ -13,6 +13,11 @@ app.use(cors({
     credentials: true,
 }));
 
+
+app.get("/",(req,res)=>{
+    res.send("hello world");
+}
+
 const server = http.createServer(app);
 
 const io = new Server(server, {
