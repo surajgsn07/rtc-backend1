@@ -7,7 +7,7 @@ const app = express();
 
 // Configure CORS to allow requests from localhost:5173
 app.use(cors({
-    origin: '*',
+    origin: 'https://rtc-frontend1.vercel.app',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
     credentials: true,
@@ -17,7 +17,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: '*',
+        origin: 'https://rtc-frontend1.vercel.app',
         methods: ['GET', 'POST'],
         allowedHeaders: ['Content-Type'],
         credentials: true,
